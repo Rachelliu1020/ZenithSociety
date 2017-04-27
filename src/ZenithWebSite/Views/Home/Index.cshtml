@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner5.jpg" alt="asp.net" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <h1>Zenith Society</h1>
+                <p>
+                    The Zenith Society is a family oriented non-for-profit organization that holds events during the week.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 style="text-align:center">The Events of the current week</h2>
+@if (User.IsInRole("Member")|| User.IsInRole("Admin"))
+{
+    <div class="PreNextButtons">
+        <a asp-action="Previous"><button class="preButton">Previous</button></a>
+        <a asp-action="Next"><button class="nextButton">Next</button></a>
+    </div>
+}
+        <table class="homepageTable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th colspan="2">
+
+                        @item.Key.ToString("dddd MMMM dd, yyyy")
+                    </th>
+                </tr>
+
+                foreach (var e in item.Value)
+                {
+                    string strTimeDuring = e.DateTimeFrom.ToString("h:mm tt") + " - " + e.DateTimeTo.ToString("h:mm tt");
+                    string activityDesp = e.MyActivity.ActivityDesp;
+                    <tr>
+                        <td width="30%">@strTimeDuring</td>
+                        <td>@activityDesp</td>
+                    </tr>
+                }
+
+
+            }
+
+        </table>
+

@@ -1,0 +1,30 @@
+@model ZenithWebSite.Models.ZenithModels.MyActivity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Activity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityDesp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityDesp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MyActivityId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

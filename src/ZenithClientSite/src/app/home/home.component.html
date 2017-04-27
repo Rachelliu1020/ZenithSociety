@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="jumbotron">
+      <h1>ZenithSociety</h1>
+      <p class="lead">The Zenith Society is a family oriented non-for-profit organization that holds events during the week.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+        <button (click)="getPreviousEvents()" *ngIf="(isMemberOrAdmin)" class="col-md-offset-3">< previous</button>
+      </div>
+      <div class="col-md-6">
+        <button (click)="getNextEvents()" *ngIf="(isMemberOrAdmin)" class="col-md-offset-3"> next ></button>
+      </div>
+  </div>
+
+  <div class="row">
+    <table class="table" border="1">
+      <template ngFor let-item [ngForOf]="eventsItemList" let-i="index" [ngForTrackBy]="trackByFn">
+        <th class="text-center label-info" colspan="2">{{item.displaydate | date: 'EEEE MMMM dd, yyyy'}}</th>
+            <tr *ngFor="let e of item.events">
+                <td>{{e.dateTimeFromStr}} - {{e.dateTimeToStr}}</td>
+                <td>{{e.activityDesp}}</td>
+            </tr>
+      </template>
+    </table>
+  </div>
+
+</div>
