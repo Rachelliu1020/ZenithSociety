@@ -2,7 +2,7 @@
 The Zenith Society is a family oriented non-for-profit organization that holds events during the week. The leader of the group, Mr. John Doe, wishes to have a website that displays the events from Monday to Sunday of the current week. 
 
 ## Server-side Web running on Azure:
-http://zenithwebsite20170401034739.azurewebsites.net/
+http://zenithwebsiteserver.azurewebsites.net/
 
 Admin user:
 * user name: a
