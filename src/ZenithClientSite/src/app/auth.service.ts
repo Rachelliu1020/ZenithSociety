@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class AuthService {
 
-  private BASE_URL = "http://zenithwebsite20170401034739.azurewebsites.net"; 
+  private BASE_URL = "http://zenithwebsiteserver.azurewebsites.net"; 
 
   private headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
 
