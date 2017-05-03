@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ZenithService {
-  private BASE_URL = "http://zenithwebsite20170401034739.azurewebsites.net"; 
+  private BASE_URL = "http://zenithwebsiteserver.azurewebsites.net"; 
 
   constructor(private http: Http) { }
 
