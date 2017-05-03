@@ -1,5 +1,5 @@
 server web:
-http://zenithwebsite20170401034739.azurewebsites.net/
+http://zenithwebsiteserver.azurewebsites.net/
 
 client web:
 http://zenithclientside.azurewebsites.net/
